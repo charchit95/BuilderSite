@@ -1,0 +1,200 @@
+
+/* 768px */
+@media (max-width : 768px) {
+
+    /* header starts */
+    .header .navigation-box {
+        padding-top : 1em ;
+        padding-bottom : 1em ;
+    }
+
+    .navigation-box .navigation {
+        max-width : 700px ;
+    }
+
+    .navigation .menu-toggle-box {
+        display : block ;
+        width : 48px ;
+        height : 48px ;
+        cursor : pointer ;
+    }
+
+    .menu-toggle-box img {
+        width : 100% ;
+    }
+
+    .navigation .menu-items {
+        display : none ;
+    }
+    /* header ends */
+    
+    /* about-section starts */
+    .about-section {
+        background: linear-gradient(155deg, transparent 0% , 
+            transparent 50% , hsl(222, 81%, 4%) 50%);
+    }
+    .about-heading h1 ,
+    .service-heading h1 ,
+    .latest-project-heading h1 {
+        font-size : 4rem ;
+    }
+
+    .about-section .box-1 p {
+        font-size : 2.3rem ;
+    }
+        
+    .about-section .box-1 .about-button , 
+    .service-inner-box button ,
+    .rb-inner-section button ,
+    .financers-inner-section button ,
+    .pr-inner-section button {
+        font-size : 2rem ;
+        margin-left : 1em ;
+    }
+    /* about-section ends */
+    
+    /* latest-projects-section starts */
+    .latest-projects-section .latest-project-button {
+        font-size : 1.6rem ;
+    }
+    /* latest-projects-section ends */
+    
+    /* footer starts */
+    .footer-inner-box .box-1 {
+        justify-content : center ;
+    }
+
+    .footer-inner-box .box-2 {
+        margin : 0 auto ;
+    }
+    /* footer ends */
+    
+    /* scrollup-box starts */
+    .scrollbox {
+        width : 50px ;
+        height : 50px ;
+        right : 20px ;
+        bottom : 20px ;
+    }
+    /* scrollup-box ends */
+}
+
+@media (max-width : 576px) {
+    /* about-section starts */
+    .about-section .about-heading {
+        margin : 0 auto ;
+    }
+
+    .about-section .box-1 {
+        margin-bottom : 10em ;
+    }
+
+    .about-section .box-1 .about-button , 
+    .service-inner-box button ,
+    .rb-inner-section button ,
+    .financers-inner-section button ,
+    .pr-inner-section button {
+        margin-left : 0 ;
+    }
+    /* about-section ends */
+    
+    /* registered-builders-section starts */
+    .registered-builders-section::after ,
+    .financers-section::after ,
+    .projects-running-section::after {
+        background-color : rgb(255 249 249 / 60%) ;
+        background-blend-mode : multiply ;
+    }
+    /* registered-builders-section ends */
+}
+
+@media (max-width : 425px) {
+    /* about-section starts */
+    .about-section {
+        background: linear-gradient(162deg, 
+            transparent 0% , transparent 60% , hsl(222, 81%, 4%) 60%);
+    }
+
+    .about-section .box-2 {
+        margin-left : 0 ;
+    }
+    /* about-section ends */
+
+    /* registered-builders-section starts */
+    .rb-inner-section button {
+        padding-right : 1.2em ;
+        padding-left : 1.2em ;
+    }
+    /* registered-builders-section ends */
+
+    /* footer starts */
+    .footer-inner-box .box-1 h3 {
+        font-size : 1.8rem ;
+    }
+
+    .footer-inner-box .box-2 {
+        width : 60% ;
+    }
+    /* footer ends */
+}
+
+@media (max-width : 375px) {
+    /* about-section starts */
+    .about-section {
+        background : transparent ;
+    }
+    
+    .about-section .box-1 {
+        margin-bottom : 0 ;
+    }
+
+    .about-section .box-2 {
+        display : none ;
+    }
+
+    .about-section .box-1 p {
+        text-align : left ;
+        font-size : 2.1rem ;
+    }
+
+    .about-section .box-1 .about-button {
+        margin-top : 0 ;
+    }
+    /* about-section ends */
+
+    /* our-services-section starts */
+    .about-heading h1 ,
+    .service-heading h1 ,
+    .latest-project-heading h1 {
+        font-size : 2rem ;
+    }
+
+    .service-inner-box h2 {
+        font-size : 5rem ;
+    }
+
+    .service-inner-box p {
+        font-size : 2.4rem ;
+    }
+    /* our-services-section ends */
+
+    /* latest-projects-section starts */
+    .latest-projects-section .main-heading {
+        font-size : 5rem ;
+    }
+    /* latest-projects-section ends */
+
+    /* registered-builders-section starts */
+    .rb-inner-section p ,
+    .financers-inner-section p ,
+    .pr-inner-section p {
+        font-size : 3rem ;
+    }
+    /* registered-builders-section ends */
+
+    /* footer starts */
+    .footer-inner-box .box-2 {
+        margin-left : 0 ;
+    }
+    /* footer ends */
+}

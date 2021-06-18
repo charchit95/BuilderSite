@@ -1,0 +1,480 @@
+* , 
+*::before ,
+*::after {
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing : border-box ;
+}
+
+:root {
+    --color-black : #000  ;
+    --color-white : #FFF ;
+    --color-orange : #fc5e28 ;
+    --color-darkorange : #FF3514 ;
+    --color-light-orange : #ccb2aa ;
+    --color-darkblue : #040e26 ;
+    --fixed-width : 1240px ;
+}
+
+html {
+    font-size : 62.5% ;
+    scroll-behavior : smooth ;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;   
+}
+
+/* ---------- header starts ---------- */
+.header {
+    width : 100% ;
+    height : 100vh ;
+    overflow : hidden ;
+}
+
+/* header */
+/* ------- navigation starts */
+.header .navigation-box {
+    width : 100% ;
+    padding-top : 2em ;
+    padding-bottom : 2em ;
+    background-color : var(--color-orange) ;
+}
+
+.navigation-box .navigation {
+    max-width : var(--fixed-width) ;
+
+    display : flex ;
+    justify-content : space-between ;
+    align-items : center ;
+}
+
+.navigation .logo-box a {
+    text-decoration : none ;
+}
+
+.logo-box a h1 {
+    color : var(--color-white) ;
+    font-size : 3rem ;
+    margin-bottom : 0 ;
+}
+
+.navigation .menu-toggle-box {
+    display : none ;
+
+    color : var(--color-white) ;
+    font-size: 3.2em;
+    text-align: right;
+} 
+
+.navigation .menu-items {
+    width : 70% ;
+    margin-bottom : 0 ;
+
+    display : flex ;
+    justify-content : space-around ;
+    align-items : center ;
+}
+
+.menu-items .item {
+    list-style : none ;
+}
+
+.item a {
+    text-decoration : none ;
+    color : var(--color-white) ;
+    font-size : 1.8rem ;
+    font-weight : 500 ;
+}
+
+.item a:hover {
+    color : var(--color-darkblue) ;
+}
+/* ------- navigation ends */
+
+/* header */
+/* ------- banner starts */
+.header .banner {
+    width : 100% ;
+    height : 100% ;
+    overflow : hidden ;
+}
+
+.banner .carousel-inner , 
+.carousel-inner .carousel-item{
+    width : inherit ;
+    height : inherit ;
+}
+
+.carousel-inner .carousel-item {
+    background-size : cover ;
+    background-position : center top ;
+    background-attachment : fixed ;
+    background-repeat : no-repeat ;
+    background-color : var(--color-light-orange) ;
+    background-blend-mode : multiply ;
+}
+
+.carousel-inner .item-1 {
+    background-image : url("../img/banner-1.jpg")
+}
+
+.carousel-inner .item-2 {
+    background-image : url("../img/banner-2.jpg")
+}
+
+.carousel-inner .item-3 {
+    background-image : url("../img/banner-3.jpg")
+}
+
+.carousel-inner .item-4 {
+    background-image : url("../img/banner-4.jpg")
+}
+
+.carousel-inner .item-5 {
+    background-image : url("../img/banner-5.jpg")
+}
+/* ------- banner ends */
+/* ---------- header starts ---------- */
+
+/* ---------- about-section starts ---------- */
+.about-section {
+    width : 100% ;
+    padding-top : 10em ;
+    padding-bottom : 8em ;
+    background : linear-gradient(120deg , 
+        transparent 0% , transparent 50% , hsl(222, 81%, 4%) 50%)
+}
+
+.about-section .about-heading ,
+.service-inner-box .service-heading  ,
+.latest-projects-section .latest-project-heading {
+    padding : 1em;
+    width : fit-content ;
+    background-color : var(--color-darkorange) ;
+    color : var(--color-white) ;
+    transform : skewX(-10deg) ;
+    animation : thebox 2s infinite; 
+    animation-direction : alternate ;
+}
+
+@keyframes thebox {
+    0% {
+        transform : skewX(10deg) ;
+    }
+
+    50% {
+        transfrom : skewX(-10deg) ;
+    }
+
+    100% {
+        transfrom : skewX(10deg) ;
+    }
+}
+
+.about-heading h1 ,
+.service-heading h1 {
+    margin-bottom : 0 ;
+}
+
+.about-section .box-1 p {
+    margin-top : 1.5em ;
+    font-size : 1.8rem ;
+    text-align : justify ;
+}
+
+.about-section .box-1 .about-button ,
+.service-inner-box button , 
+.rb-inner-section button , 
+.financers-inner-section button , 
+.pr-inner-section button {
+    margin-top : 1em ;
+    padding : .6em 1.4em ;
+    border : 2px solid var(--color-darkblue) ;
+    background-color : transparent ;
+    background : linear-gradient(120deg , transparent 0% , 
+        transparent 50% , var(--color-darkblue) 50%) ;
+    background-size : 220% ;
+    cursor : pointer ;
+    
+    font-size : 1.5rem ;
+    color : var(--color-darkblue) ;
+
+    transition : background .2s linear ;
+}
+
+.about-section .box-1 .about-button:hover , 
+.service-inner-box button:hover ,
+.rb-inner-section button:hover , 
+.financers-inner-section button:hover , 
+.pr-inner-section button:hover {
+    background-position : 100% ;
+    color : var(--color-white) ;
+}
+
+.about-section .box-2 img {
+    width : 100% ;
+}
+/* ---------- about-section ends ---------- */
+
+/* ---------- our-services-section starts ---------- */
+.service-section {
+    width : 100% ;
+    padding-top : 10em ;
+    padding-bottom : 8em ;
+    
+    position : relative ;
+}
+
+.service-section::after {
+    content : "" ;
+    position : absolute ;
+    top : 0 ;
+    right : 0 ;
+    left : 0 ;
+
+    width : 100% ;
+    height : 100% ;
+
+    background-image : url("../img/pic-1.jpg") ;
+    background-size : cover ;
+    background-repeat : no-repeat ;
+    background-position : left bottom ;
+    background-attachment : fixed ;
+    opacity : .4 ;
+}
+
+.service-section .service-inner-box {
+    position : relative ;
+    z-index : 2 ;
+    text-align : center ;
+}
+
+.service-inner-box .service-heading {
+    margin : 0 auto ;
+}
+
+.service-inner-box h2 {
+    text-align : center ;
+    margin-top : .6em ;
+    margin-bottom : 1em ;
+    font-size : 4rem ;
+    font-weight : 600 ; 
+}
+
+.service-inner-box p {
+    margin-top : .6em ;
+    font-size : 2.6rem ;
+    text-align : left ;
+}
+
+.service-inner-box p span {
+    margin-right : .6em ;
+}
+
+.service-inner-box button ,
+.rb-inner-section button ,
+.financers-inner-section button , 
+.pr-inner-section button {
+    margin-top : 2em ;
+    margin-left : 4em ;
+}
+/* ---------- our-services-section ends ---------- */
+
+/* ---------- latest-projects-section starts ---------- */
+.latest-projects-section {
+    padding-top : 10em ;
+    padding-bottom : 8em ;
+}
+
+.latest-project-heading {
+    margin : 0 auto ;
+}
+
+.latest-projects-section .main-heading {
+    text-align : center ;
+    margin-top : .6em ;
+    font-size : 4rem ;
+}
+
+.latest-projects-section .details-heading {
+    margin-top : 2em ;
+    margin-bottom : 1em ;
+    font-size : 2.4rem ;
+}
+
+.latest-projects-section .latest-projects-details {
+    font-size : 2rem ;
+}
+
+.latest-projects-section .latest-project-button {
+    display : block ;
+    margin : 4em auto 0;
+    padding : 1em 2em ;
+    background-color : var(--color-darkblue) ;
+    border : 2px solid var(--color-darkblue) ;
+    cursor : pointer ;
+
+    color : var(--color-white) ;
+    font-size : 1.4rem ;
+}
+/* ---------- latest-projects-section ends ---------- */
+
+/* ---------- registered-builders-section starts ---------- */
+.registered-builders-section ,
+.financers-section , 
+.projects-running-section {
+    width : 100% ;
+    padding-top : 10em ;
+    padding-bottom : 8em ;
+    background-image : url("../img/pic-2.jpg") ;
+    background-size : cover ;
+    background-repeat : no-repeat ;
+    background-position : center ;
+    background-attachment : fixed ;
+
+    position : relative ;
+}
+
+.registered-builders-section::after ,
+.financers-section::after ,
+.projects-running-section::after {
+    content : "" ;
+    position : absolute ;
+    top : 0 ;
+    left : 0 ;
+    right : 0 ;
+    
+    width : 100% ;
+    height : 100% ;
+    background-color : rgba(79, 78, 78, 0.6); ;
+}
+
+.registered-builders-section .rb-inner-section ,
+.financers-section .financers-inner-section ,
+.projects-running-section .pr-inner-section {
+    position : relative ;
+    z-index : 2 ;
+
+    text-align : center ;
+}
+
+.rb-inner-section h1 ,
+.financers-inner-section h1 ,
+.pr-inner-section h1 {
+    font-size : 5rem ;
+    color : var(--color-black) ;
+}
+
+.rb-inner-section p , 
+.financers-inner-section p ,
+.pr-inner-section p {
+    font-size : 3.2rem ;
+    margin-top : 1em ;
+    font-weight : 500 ;
+    color : var(--color-darkblue) ;
+}
+
+.rb-inner-section button , 
+.financers-inner-section button ,
+.pr-inner-section button {
+    color : var(--color-black) ;
+    font-weight : 500 ;
+}
+/* ---------- registered-builders-section ends ---------- */
+
+/* ---------- financers-section starts ---------- */
+.financers-section {
+    background-image : url("../img/pic-3.jpg") ;
+    background-attachment : scroll ;
+}
+
+.financers-section::after {
+    background-color : rgba(79, 78, 78, 0.2) ;
+}
+/* ---------- financers-section ends ---------- */
+
+/* ---------- projects-running-section starts ---------- */
+.projects-running-section {
+    background-image : url("../img/pic-4.jpg") ;
+    background-attachment : fixed ;
+}
+
+.projects-running-section::after {
+    background-color : rgba(206, 200, 200, 0.6) ;
+}
+
+.pr-inner-section p span {
+    text-decoration-line : underline ;
+    text-decoration-thickness : 5px ;
+    text-decoration-color : var(--color-darkorange) ;
+}
+/* ---------- projects-running-section ends ---------- */
+
+/* ---------- footer-section starts ---------- */
+.footer {
+    width : 100% ;
+    padding-top : 5em ;
+    padding-bottom : 3em ;
+    background-color : var(--color-darkblue) ;
+    color : var(--color-white) ;
+}
+
+.footer-inner-box .box-1 {
+    display : flex ;
+    align-items : center ;
+}
+
+.footer-inner-box .box-1 h3 {
+    font-size : 2.2rem ;
+}
+
+.footer-inner-box .box-2 ul{
+    display : flex ;
+    justify-content : space-between ;
+}
+
+.footer-inner-box .box-2 ul li {
+    list-style : none ;
+    font-size : 3.2rem ;
+}
+
+.footer-inner-box .box-2 ul li a {
+    color : var(--color-white) ;
+}
+
+.footer-inner-box .box-2 ul li a:hover {
+    color : var(--color-orange) ;
+}
+
+/* ---------- footer-section ends ---------- */
+
+/* ---------- scroll-button starts */
+.scrollup-box {
+    display : none ;
+}
+
+a.show {
+    display : block ;
+}
+
+.scrollbox {
+    width : 40px ;
+    height : 40px ;
+    background-color : var(--color-orange) ;
+    position : fixed ;
+    right : 10px ;
+    bottom : 8px ;
+    z-index : 20 ;
+    border-radius : 2px ;
+    cursor : pointer ;
+
+    display : grid ;
+    place-items : center ;
+}
+
+.scrollbox span.fa-level-up-alt {
+    font-size : 2rem ;
+    color : var(--color-white) ;
+}
+/* ---------- scroll-button ends */
